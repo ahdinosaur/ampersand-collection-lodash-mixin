@@ -1,8 +1,8 @@
-var _ = require('underscore');
+var _ = require('lodash');
 var test = require('tape');
 var AmpersandState = require('ampersand-state');
 var AmpersandCollection = require('ampersand-collection');
-var AmpersandUnderscoreMixins = require('../ampersand-collection-underscore-mixin');
+var AmpersandLodashMixins = require('../ampersand-collection-lodash-mixin');
 var collection;
 
 var Model = AmpersandState.extend({
@@ -13,7 +13,7 @@ var Model = AmpersandState.extend({
     }
 });
 
-var Collection = AmpersandCollection.extend(AmpersandUnderscoreMixins, {
+var Collection = AmpersandCollection.extend(AmpersandLodashMixins, {
     model: Model
 });
 
@@ -22,7 +22,7 @@ var methods = ['forEach', 'each', 'map', 'collect', 'reduce', 'foldl',
     'reject', 'every', 'all', 'some', 'any', 'include', 'contains', 'invoke',
     'max', 'min', 'toArray', 'size', 'first', 'head', 'take', 'initial', 'rest',
     'tail', 'drop', 'last', 'without', 'difference', 'indexOf', 'shuffle',
-    'lastIndexOf', 'isEmpty', 'chain', 'sample', 'partition',
+    'lastIndexOf', 'isEmpty', 'chain', 'sample',
     'groupBy', 'countBy', 'sortBy', 'indexBy'
 ];
 

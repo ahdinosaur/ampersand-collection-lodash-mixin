@@ -1,13 +1,13 @@
 {
-  "name": "ampersand-collection-underscore-mixin",
-  "description": "A mixin for extending ampersand-collection with underscore methods.",
+  "name": "ampersand-collection-lodash-mixin",
+  "description": "A mixin for extending ampersand-collection with lodash methods.",
   "version": "1.0.1",
   "author": "Henrik Joreteg <henrik@andyet.net>",
   "bugs": {
-    "url": "https://github.com/ampersandjs/ampersand-collection-underscore-mixin/issues"
+    "url": "https://github.com/strml/ampersand-collection-lodash-mixin/issues"
   },
   "dependencies": {
-    "underscore": "^1.6.0"
+    "lodash": "^2.4.1"
   },
   "devDependencies": {
     "ampersand-collection": "^1.0.0",
@@ -16,17 +16,17 @@
     "run-browser": "~1.2.0",
     "tape": "~2.12.1"
   },
-  "homepage": "https://github.com/ampersandjs/ampersand-collection-underscore-mixin",
+  "homepage": "https://github.com/strml/ampersand-collection-lodash-mixin",
   "keywords": [
     "ampersand",
     "collection",
-    "underscore"
+    "lodash"
   ],
   "license": "MIT",
-  "main": "ampersand-collection-underscore-mixin.js",
+  "main": "ampersand-collection-lodash-mixin.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ampersandjs/ampersand-collection-underscore-mixin"
+    "url": "git://github.com/strml/ampersand-collection-lodash-mixin"
   },
   "scripts": {
     "test": "node test/index.js",

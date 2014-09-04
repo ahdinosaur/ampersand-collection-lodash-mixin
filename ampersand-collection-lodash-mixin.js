@@ -1,18 +1,18 @@
-var _ = require('underscore');
+var _ = require('lodash');
 var slice = [].slice;
 var mixins = {};
 
 
-// Underscore methods that we want to implement on the Collection.
+// Lodash methods that we want to implement on the Collection.
 var methods = ['forEach', 'each', 'map', 'collect', 'reduce', 'foldl',
     'inject', 'reduceRight', 'foldr', 'find', 'detect', 'filter', 'select',
     'reject', 'every', 'all', 'some', 'any', 'include', 'contains', 'invoke',
     'max', 'min', 'toArray', 'size', 'first', 'head', 'take', 'initial', 'rest',
     'tail', 'drop', 'last', 'without', 'difference', 'indexOf', 'shuffle',
-    'lastIndexOf', 'isEmpty', 'chain', 'sample', 'partition'
+    'lastIndexOf', 'isEmpty', 'chain', 'sample'
 ];
 
-// Mix in each Underscore method as a proxy to `Collection#models`.
+// Mix in each Lodash method as a proxy to `Collection#models`.
 _.each(methods, function (method) {
     if (!_[method]) return;
     mixins[method] = function () {
@@ -22,7 +22,7 @@ _.each(methods, function (method) {
     };
 });
 
-// Underscore methods that take a property name as an argument.
+// Lodash methods that take a property name as an argument.
 var attributeMethods = ['groupBy', 'countBy', 'sortBy', 'indexBy'];
 
 // Use attributes instead of properties.
