@@ -1,27 +1,28 @@
-# ampersand-collection-underscore-mixin
+# ampersand-collection-lodash-mixin
 
-A mixin for extending ampersand-collection with underscore methods.
+A mixin for extending ampersand-collection with lodash methods. 
+This is a fork of [ampersand-collection-underscore-mixin](https://github.com/AmpersandJS/ampersand-collection-underscore-mixin).
 
 If you're using an [ampersand-rest-collection](http://ampersandjs.com/docs/#ampersand-rest-collection) this is already mixed in for you.
 
-Out of the box, ampersand-collections proxy the [ES5 iteration methods already](http://ampersandjs.com/docs/#ampersand-collection-proxied-es5-array-methods-9) so you don't _have_ to use this mixin, but if you want all the underscore methods, or better browser support, you can use this.
+Out of the box, ampersand-collections proxy the [ES5 iteration methods already](http://ampersandjs.com/docs/#ampersand-collection-proxied-es5-array-methods-9) so you don't _have_ to use this mixin, but if you want all the lodash methods, or better browser support, you can use this.
 
 ## install
 
 ```
-npm install ampersand-collection-underscore-mixin
+npm install ampersand-collection-lodash-mixin
 ```
 
 ## example
 
 ```javascript
 var Collection = require('ampersand-collection');
-var underscoreMixin = require('ampersand-collection-underscore-mixin');
+var underscoreMixin = require('ampersand-collection-lodash-mixin');
 
 
 module.exports = Collection.extend(underscoreMixin, {
     sampleMethod: function () {
-        // now we've got underscore methods 
+        // now we've got lodash methods 
         // we can call that are applied to models
         // in the collection.
         this.filter( ... );
@@ -33,7 +34,9 @@ module.exports = Collection.extend(underscoreMixin, {
 
 ## credits
 
-All credit for underscore and this approach in backbone goes to Jeremy Ashkenas and the rest of the Backbone and Underscore authors.
+All credit for this approach in backbone goes to Jeremy Ashkenas and the rest of the Backbone authors.
+
+Lodash is written by John-David Dalton.
 
 If you like this follow [@HenrikJoreteg](http://twitter.com/henrikjoreteg) on twitter.
 
