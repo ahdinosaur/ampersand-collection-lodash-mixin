@@ -28,6 +28,23 @@ test('extended collection contains all necessary methods', function (t) {
     t.end();
 });
 
+test('`map` should work as expected', function (t) {
+    var collection = new Collection([
+        { id: 1, foo: 'baz', bar: 'baz' },
+        { id: 2, foo: 'baz', bar: 'baz' },
+        { id: 3, foo: 'baz', bar: 'qux' },
+        { id: 4, foo: 'qux', bar: 'qux' },
+        { id: 5, foo: 'qux', bar: 'qux' },
+        { id: 6, foo: 'qux', bar: 'baz' }
+    ]);
+
+    var foos = collection.map(function (model) {
+        return model.get('foo');
+    });
+    t.deepEqual(foos, ['baz', 'baz', 'baz', 'qux', 'qux', 'qux'], 'return foo for all models');
+    t.end();
+});
+
 test('`where` and `findWhere` methods should filter a collection based on a given attributes', function (t) {
     var collection = new Collection([
         { id: 1, foo: 'baz', bar: 'baz' },
