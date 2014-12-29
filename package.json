@@ -27,7 +27,7 @@
     "lodash"
   ],
   "license": "MIT",
-  "main": "ampersand-collection-lodash-mixin.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/strml/ampersand-collection-lodash-mixin"
