@@ -1,10 +1,11 @@
 {
   "name": "ampersand-collection-lodash-mixin",
   "description": "A mixin for extending ampersand-collection with lodash methods.",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "Henrik Joreteg <henrik@andyet.net>",
   "contributors": [
-    "Samuel Reed <sam@bitmex.com>"
+    "Samuel Reed <sam@bitmex.com>",
+    "Michael Williams <michael@enspiral.com>"
   ],
   "bugs": {
     "url": "https://github.com/strml/ampersand-collection-lodash-mixin/issues"
