@@ -2,8 +2,9 @@ var _ = require('lodash');
 var test = require('tape');
 var AmpersandState = require('ampersand-state');
 var AmpersandCollection = require('ampersand-collection');
-var AmpersandLodashMixins = require('../ampersand-collection-lodash-mixin');
-var collection;
+
+var AmpersandLodashMixins = require('../');
+var LodashMixinMethods = require('../lib/methods');
 
 var Model = AmpersandState.extend({
     props: {
@@ -17,17 +18,11 @@ var Collection = AmpersandCollection.extend(AmpersandLodashMixins, {
     model: Model
 });
 
-var methods = ['forEach', 'each', 'map', 'collect', 'reduce', 'foldl',
-    'inject', 'reduceRight', 'foldr', 'find', 'detect', 'filter', 'select',
-    'reject', 'every', 'all', 'some', 'any', 'include', 'contains', 'invoke',
-    'max', 'min', 'toArray', 'size', 'first', 'head', 'take', 'initial', 'rest',
-    'tail', 'drop', 'last', 'without', 'difference', 'indexOf', 'shuffle',
-    'lastIndexOf', 'isEmpty', 'chain', 'sample',
-    'groupBy', 'countBy', 'sortBy', 'indexBy'
-];
+var collection;
 
 test('extended collection contains all necessary methods', function (t) {
-    _.each(methods, function (method) {
+    _.each(LodashMixinMethods, function (method) {
+        method = _.isArray(method) ? method[0] : method;
         t.ok(Collection.prototype[method], 'extended collection contains ' + method + ' method');
     });
     t.end();
