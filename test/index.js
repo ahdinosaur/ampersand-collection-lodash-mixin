@@ -18,8 +18,6 @@ var Collection = AmpersandCollection.extend(AmpersandLodashMixins, {
     model: Model
 });
 
-var collection;
-
 test('extended collection contains all necessary methods', function (t) {
     _.each(LodashMixinMethods, function (method) {
         method = _.isArray(method) ? method[0] : method;
